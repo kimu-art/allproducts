@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全部商品 ｜ KIMUART</title>
+<meta name="description" content="KIMUART 的筆刷、教學與一對一服務都在這裡。免費筆刷、付費筆刷、免費跟練直播、線上課程，到一對一視覺化創作教練，一頁看完。">
+<meta property="og:title" content="全部商品 ｜ KIMUART">
+<meta property="og:description" content="KIMUART 的筆刷、教學與一對一服務都在這裡，一頁看完。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FFFFFF;
+  --paper-2:#FAF7F3;
+  --sand:#F2EDE6;
+  --sand-line:#E9E2D8;
+  --ink:#3E322A;
+  --ink-soft:#6B5E53;
+  --ink-faint:#A99C8D;
+  --terra:#B96B41;
+  --terra-deep:#9E5530;
+  --glow:#F7E6C9;
+  --leaf:#6F8358;
+  --maxw:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+  color:var(--ink-soft);
+  background:var(--paper);
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:var(--paper-2);
+  border-bottom:1px solid var(--sand-line);
+  padding:74px 20px 62px;
+  text-align:center;
+}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:19px;
+  letter-spacing:3px;
+  color:var(--terra);
+  margin-bottom:10px;
+}
+.hero h1{
+  font-family:'Noto Serif TC',serif;
+  font-size:36px;
+  font-weight:700;
+  color:var(--ink);
+  line-height:1.5;
+  letter-spacing:1px;
+  margin-bottom:18px;
+}
+.hero p{font-size:16px;max-width:560px;margin:0 auto;}
+.hero .hint{margin-top:18px;font-size:14px;color:var(--ink-faint);}
+
+/* ---------- 目錄 ---------- */
+.toc{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,255,255,0.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--sand-line);
+}
+.toc-inner{
+  max-width:var(--maxw);
+  margin:0 auto;
+  padding:12px 20px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.toc a{
+  font-size:14px;
+  color:var(--ink-soft);
+  text-decoration:none;
+  padding:6px 15px;
+  border:1px solid var(--sand-line);
+  border-radius:999px;
+  white-space:nowrap;
+  transition:all .2s ease;
+}
+.toc a:hover{color:var(--terra-deep);border-color:rgba(185,107,65,.45);background:var(--paper-2);}
+
+/* ---------- 區塊 ---------- */
+.sec{padding:66px 20px 12px;}
+.sec.alt{background:var(--paper-2);border-top:1px solid var(--sand-line);border-bottom:1px solid var(--sand-line);padding-bottom:66px;margin-top:44px;}
+.sec-inner{max-width:var(--maxw);margin:0 auto;}
+.sec-head{text-align:center;margin-bottom:38px;}
+.sec-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;
+  letter-spacing:3px;
+  color:var(--terra);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.sec-head h2{
+  font-family:'Noto Serif TC',serif;
+  font-size:26px;
+  font-weight:600;
+  color:var(--ink);
+  letter-spacing:1px;
+  margin-bottom:8px;
+}
+.sec-head p{font-size:15px;max-width:520px;margin:0 auto;}
+
+/* ---------- 櫥窗格線 ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.card{
+  display:flex;
+  flex-direction:column;
+  background:var(--paper);
+  border:1px solid var(--sand-line);
+  border-radius:18px;
+  overflow:hidden;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(107,94,83,.10);border-color:rgba(185,107,65,.35);}
+.card-link{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  text-decoration:none;
+  min-width:0;
+}
+.c-img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  background:var(--sand);
+}
+.c-body{padding:20px 22px 14px;display:flex;flex-direction:column;flex:1;}
+.tag{
+  display:inline-block;
+  align-self:flex-start;
+  font-size:12px;
+  letter-spacing:1.5px;
+  color:var(--terra);
+  background:var(--paper);
+  border:1px solid rgba(185,107,65,.32);
+  padding:3px 12px;
+  border-radius:999px;
+  margin-bottom:11px;
+}
+.tag-free{color:var(--leaf);border-color:rgba(111,131,88,.38);}
+.tag-soon{color:var(--ink-faint);border-color:var(--sand-line);}
+.card h3{
+  font-family:'Noto Serif TC',serif;
+  font-size:17.5px;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.6;
+  margin-bottom:8px;
+}
+.card p{font-size:14.5px;color:var(--ink-soft);line-height:1.85;margin-bottom:14px;}
+
+/* ---------- 卡片底列：價格 ｜ 查看商品 ＋ 購物車 ---------- */
+.meta{
+  margin:0 22px;
+  padding:11px 0 18px;
+  border-top:1px solid var(--sand-line);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.price{font-family:'Noto Serif TC',serif;font-size:16px;color:var(--terra-deep);font-weight:600;line-height:1.4;}
+.price.free{color:var(--leaf);}
+.price.soon{color:var(--ink-faint);font-size:15px;}
+.price small{font-size:12.5px;font-weight:400;color:var(--ink-faint);margin-left:5px;}
+.meta-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.go{
+  font-size:14px;
+  color:var(--terra);
+  white-space:nowrap;
+  text-decoration:none;
+  transition:color .18s ease;
+}
+.go:hover{color:var(--terra-deep);}
+.card:hover .go{color:var(--terra-deep);}
+
+/* 小尺寸購物車鈕 */
+.add{
+  width:30px;
+  height:30px;
+  flex-shrink:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--paper);
+  border:1px solid rgba(185,107,65,.38);
+  border-radius:50%;
+  color:var(--terra);
+  cursor:pointer;
+  padding:0;
+  transition:all .18s ease;
+}
+.add:hover{background:var(--terra);border-color:var(--terra);color:#FFF8EF;}
+.add svg{width:15px;height:15px;pointer-events:none;}
+.add .ic-check{display:none;}
+.add.in{background:var(--leaf);border-color:var(--leaf);color:#FFFFFF;}
+.add.in .ic-cart{display:none;}
+.add.in .ic-check{display:block;}
+
+/* ---------- 一對一（整張橫幅卡） ---------- */
+.coach{
+  display:flex;
+  align-items:stretch;
+  background:var(--paper);
+  border:1px solid var(--sand-line);
+  border-radius:22px;
+  overflow:hidden;
+}
+/* 圖包一層 div：<img> 當 flex item 時 min-width:auto 會撐成原圖寬度，
+   把右邊文字擠出容器再被 overflow:hidden 切掉 */
+.coach-media{flex:0 0 44%;min-width:0;}
+.coach-media img{width:100%;height:100%;min-height:340px;object-fit:cover;}
+.coach-txt{flex:1 1 auto;min-width:0;padding:44px 42px;display:flex;flex-direction:column;justify-content:center;}
+.coach-txt h3{
+  font-family:'Noto Serif TC',serif;
+  font-size:24px;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.55;
+  margin:12px 0 12px;
+}
+.coach-txt p{font-size:15.5px;margin-bottom:10px;}
+.coach-txt .note{font-size:14px;color:var(--ink-faint);margin-bottom:26px;}
+.btn{
+  display:inline-block;
+  align-self:flex-start;
+  background:var(--terra);
+  color:#FFF8EF;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:500;
+  letter-spacing:1px;
+  padding:13px 32px;
+  border-radius:999px;
+  border:1px solid var(--terra);
+  cursor:pointer;
+  font-family:inherit;
+  transition:background .2s ease;
+}
+.btn:hover{background:var(--terra-deep);border-color:var(--terra-deep);}
+
+/* ---------- 購物車浮動列 ---------- */
+.bar{
+  position:fixed;
+  left:50%;
+  bottom:22px;
+  transform:translate(-50%,140%);
+  z-index:60;
+  width:calc(100% - 32px);
+  max-width:560px;
+  background:var(--paper);
+  border:1px solid var(--sand-line);
+  border-radius:18px;
+  box-shadow:0 14px 40px rgba(107,94,83,.20);
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  transition:transform .28s cubic-bezier(.2,.8,.3,1);
+}
+.bar.show{transform:translate(-50%,0);}
+.bar-sum{flex:1;min-width:0;line-height:1.6;}
+.bar-count{font-size:13.5px;color:var(--ink-faint);}
+.bar-total{font-family:'Noto Serif TC',serif;font-size:19px;color:var(--ink);font-weight:600;}
+.bar-clear{
+  background:none;
+  border:none;
+  font-family:inherit;
+  font-size:13px;
+  color:var(--ink-faint);
+  cursor:pointer;
+  text-decoration:underline;
+  text-underline-offset:3px;
+  white-space:nowrap;
+  padding:0;
+}
+.bar-clear:hover{color:var(--terra-deep);}
+.bar .btn{align-self:auto;padding:12px 26px;font-size:14.5px;white-space:nowrap;}
+
+/* ---------- 頁尾 ---------- */
+.foot{
+  margin-top:70px;
+  border-top:1px solid var(--sand-line);
+  background:var(--paper-2);
+  text-align:center;
+  padding:44px 20px 96px;
+}
+/* 手寫體標語圖：原圖 663x112 但四周留白，字本身只有 548x48。
+   顯示寬 260px 時，字約 215x19px，跟原本那行 17px 的字差不多大 */
+.foot .motto-img{width:260px;max-width:80%;height:auto;margin:0 auto 8px;}
+.foot .links{font-size:14px;color:var(--ink-faint);}
+.foot .links a{color:var(--ink-soft);text-decoration:none;margin:0 8px;}
+.foot .links a:hover{color:var(--terra-deep);}
+.foot .mail{margin-top:8px;font-size:14px;color:var(--ink-faint);}
+
+/* ---------- RWD ---------- */
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr);gap:20px;}
+  .coach{flex-direction:column;}
+  .coach-media{flex:none;width:100%;}
+  .coach-media img{height:auto;min-height:0;aspect-ratio:16/9;}
+  .coach-txt{padding:34px 26px 38px;}
+}
+
+/* 手機：維持兩欄櫥窗，把字級與間距一起縮 */
+@media (max-width:600px){
+  .hero{padding:56px 20px 46px;}
+  .hero h1{font-size:28px;}
+  .sec{padding:50px 16px 10px;}
+  .sec.alt{padding-bottom:50px;margin-top:34px;}
+  .sec-head{margin-bottom:28px;}
+  .sec-head h2{font-size:22px;}
+  .toc-inner{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .toc-inner::-webkit-scrollbar{display:none;}
+
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px;}
+  .card{border-radius:14px;}
+  .c-body{padding:13px 13px 8px;}
+  .tag{font-size:10.5px;letter-spacing:.5px;padding:2px 9px;margin-bottom:8px;}
+  .card h3{font-size:14.5px;line-height:1.5;margin-bottom:6px;}
+  .card p{font-size:12.5px;line-height:1.75;margin-bottom:10px;}
+
+  /* 底列改直排：價格一行，「查看商品」與購物車圖示各據左右 */
+  .meta{
+    margin:0 13px;
+    padding:9px 0 13px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:7px;
+  }
+  .price{font-size:14.5px;}
+  .price.soon{font-size:13.5px;}
+  .price small{display:block;margin:0;font-size:11.5px;}
+  .meta-actions{width:100%;justify-content:space-between;}
+  .go{font-size:12.5px;}
+  .add{width:28px;height:28px;}
+  .add svg{width:14px;height:14px;}
+
+  .coach-txt{padding:28px 20px 32px;}
+  .coach-txt h3{font-size:20px;}
+  .coach-txt p{font-size:14.5px;}
+
+  .bar{padding:12px 14px;gap:10px;}
+  .bar-total{font-size:17px;}
+  .bar .btn{padding:11px 18px;font-size:13.5px;letter-spacing:0;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <p class="eyebrow">All Products</p>
+  <h1>KIMUART 全部商品</h1>
+  <p>從免費到付費都有，挑一個喜歡的，今天就畫一張小小的圖吧。</p>
+</header>
+
+<!-- ============ 目錄 ============ -->
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="#free-brush">免費筆刷</a>
+    <a href="#paid-brush">付費筆刷</a>
+    <a href="#free-class">免費教學</a>
+    <a href="#paid-class">付費教學</a>
+    <a href="#coach">一對一教練</a>
+  </div>
+</nav>
+
+<!-- ============ 1. 免費筆刷 ============ -->
+<section class="sec" id="free-brush">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-label">Free Brushes</p>
+      <h2>免費筆刷與素材</h2>
+      <p>適合新手開始的筆刷與小教學。</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/kimusbrushes2" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/a4cc0ceb-cd02-48d2-af1b-039de20fdd74/5a497967-c831-4f5a-8bd3-ae9a42978b2c.png" alt="KIMU 特調 Procreate 筆刷與色票組">
+          <div class="c-body">
+            <span class="tag tag-free">免費筆刷</span>
+            <h3>KIMU 特調 Procreate 筆刷與色票組</h3>
+            <p>17 支特調筆刷加 14 組色票，第一次打開 Procreate，也知道要選哪一支。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price free">免費</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/kimusbrushes2" target="_blank" rel="noopener">免費索取</a>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/6christmascards" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/5fb9824f-93b5-4ada-af0e-abc0aa836f5e/3d9075d2-7aab-4b79-aed9-2e1bd8b5805d.png" alt="用一隻筆刷，畫六張療癒系聖誕卡－教學範例檔">
+          <div class="c-body">
+            <span class="tag tag-free">免費素材</span>
+            <h3>用一隻筆刷，畫六張療癒系聖誕卡</h3>
+            <p>一支筆刷、六張卡片，附教學範例檔，畫完就可以送給喜歡的人。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price free">免費</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/6christmascards" target="_blank" rel="noopener">免費索取</a>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/ipadguide" target="_blank" rel="noopener">
+          <img class="c-img" src="https://s.teachifycdn.com/image/width=2048,quality=95/school/images/b5ddb6a8-0cad-463d-96bc-b6618f6c3bec.PNG" alt="新手 iPad 選購指南">
+          <div class="c-body">
+            <span class="tag tag-free">免費指南</span>
+            <h3>新手 iPad 選購指南</h3>
+            <p>依你的預算與需求，挑出剛好夠用的 iPad 與 Apple Pencil。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price free">免費</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/ipadguide" target="_blank" rel="noopener">免費閱讀</a>
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. 付費筆刷 ============ -->
+<section class="sec alt" id="paid-brush">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-label">Brush Sets</p>
+      <h2>付費筆刷</h2>
+      <p>KIMU 特製手繪感加分筆刷，讓你的作品更有質感！</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/paperbrush" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/3a6ca50a-fcda-4a34-8724-6c3e3390f984/3f20f3e6-7e81-4dd4-b3c1-23db882e67ab.jpg" alt="特製 Procreate 水彩紙紋筆刷組">
+          <div class="c-body">
+            <span class="tag">筆刷</span>
+            <h3>特製 Procreate 水彩紙紋筆刷組</h3>
+            <p>在電繪裡鋪一層水彩紙的紋理，讓畫面也有紙的呼吸。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price">NT$300</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/paperbrush" target="_blank" rel="noopener">查看商品</a>
+            <button class="add" type="button" title="加入購物車"
+              data-type="DigitalProduct"
+              data-id="3a6ca50a-fcda-4a34-8724-6c3e3390f984"
+              data-slug="paperbrush"
+              data-name="【筆刷】特製Procreate水彩紙紋筆刷組"
+              data-price="300"
+              aria-label="加入購物車：特製 Procreate 水彩紙紋筆刷組">
+              <svg class="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.2l2.3 11.2a1.6 1.6 0 0 0 1.6 1.3h8.7a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>
+              <svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg>
+            </button>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/texturebrush" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/eaec7121-765c-4fe8-8d4e-838dbca4071d/5c7d2b43-ebaf-4398-8f25-3ba88869762d.jpg" alt="KIMU 特製繪本肌理風格筆刷">
+          <div class="c-body">
+            <span class="tag">筆刷</span>
+            <h3>KIMU 特製繪本肌理風格筆刷</h3>
+            <p>替畫面鋪上一層粗粗的肌理，像翻開一本繪本那樣。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price">NT$599</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/texturebrush" target="_blank" rel="noopener">查看商品</a>
+            <button class="add" type="button" title="加入購物車"
+              data-type="DigitalProduct"
+              data-id="eaec7121-765c-4fe8-8d4e-838dbca4071d"
+              data-slug="texturebrush"
+              data-name="【筆刷】KIMU特製繪本肌理風格筆刷"
+              data-price="599"
+              aria-label="加入購物車：KIMU 特製繪本肌理風格筆刷">
+              <svg class="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.2l2.3 11.2a1.6 1.6 0 0 0 1.6 1.3h8.7a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>
+              <svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg>
+            </button>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/letteringbrush" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/4141c6b3-4406-4c41-aeb7-2896a9e30d20/a53bd5eb-8ae8-402f-a69e-05c3bb9ebc77.jpg" alt="KIMU 特製小清新日常寫字筆刷組">
+          <div class="c-body">
+            <span class="tag">筆刷</span>
+            <h3>KIMU 特製小清新日常寫字筆刷組</h3>
+            <p>手寫感的字體筆刷，在圖的旁邊，輕輕寫上想說的那一句話。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price">NT$699</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/letteringbrush" target="_blank" rel="noopener">查看商品</a>
+            <button class="add" type="button" title="加入購物車"
+              data-type="DigitalProduct"
+              data-id="4141c6b3-4406-4c41-aeb7-2896a9e30d20"
+              data-slug="letteringbrush"
+              data-name="【筆刷】KIMU特製小清新日常寫字筆刷組"
+              data-price="699"
+              aria-label="加入購物車：KIMU 特製小清新日常寫字筆刷組">
+              <svg class="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.2l2.3 11.2a1.6 1.6 0 0 0 1.6 1.3h8.7a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>
+              <svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg>
+            </button>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/doublebrushes" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/13864899-f0a4-420e-9eb5-d49df759fc16/769b1c64-247c-4dde-b10f-82b9befbd862.jpg" alt="手繪感神助攻－雙筆刷組合">
+          <div class="c-body">
+            <span class="tag">組合優惠</span>
+            <h3>手繪感神助攻－雙筆刷組合</h3>
+            <p>水彩紙紋與繪本肌理一次帶走，是最常被一起用到的兩組。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price">NT$799</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/doublebrushes" target="_blank" rel="noopener">查看商品</a>
+            <button class="add" type="button" title="加入購物車"
+              data-type="DigitalProduct"
+              data-id="13864899-f0a4-420e-9eb5-d49df759fc16"
+              data-slug="doublebrushes"
+              data-name="【組合優惠】手繪感神助攻-雙筆刷組合"
+              data-price="799"
+              aria-label="加入購物車：手繪感神助攻－雙筆刷組合">
+              <svg class="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.2l2.3 11.2a1.6 1.6 0 0 0 1.6 1.3h8.7a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>
+              <svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg>
+            </button>
+          </span>
+        </div>
+      </article>
+
+
+
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. 免費教學（直播回放） ============ -->
+<section class="sec" id="free-class">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-label">Free Live Replay</p>
+      <h2>免費教學｜跟練直播回放</h2>
+      <p>一邊聽、一邊畫，慢慢熟悉 Procreate 的操作與創作的節奏。</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/live2" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/af04fa1c-9ad5-4bd6-8573-62bfde1d8a29/fc6b3b95-a67e-4f79-8171-1cc4f49b3b6a.jpg" alt="iPad 繪畫跟練課－好玩的控筆練習（草莓蛋糕捲）">
+          <div class="c-body">
+            <span class="tag tag-free">控筆練習</span>
+            <h3>好玩的控筆練習（草莓蛋糕捲）</h3>
+            <p>畫一捲草莓蛋糕，練習穩定又流暢的線條。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price free">免費</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/live2" target="_blank" rel="noopener">免費觀看</a>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/live3" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/102d8de7-e850-4eac-88a6-6b4153cfe200/8bf8ee29-47a6-48fc-83a5-7115b76f22a8.jpg" alt="iPad 繪畫跟練課－靈感累積小妙招（開心狗狗）">
+          <div class="c-body">
+            <span class="tag tag-free">靈感收集</span>
+            <h3>靈感累積小妙招（開心狗狗）</h3>
+            <p>畫一隻開心的狗狗，順手把日常裡的靈感收進來。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price free">免費</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/live3" target="_blank" rel="noopener">免費觀看</a>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/live4" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/a380df40-8ba3-42b8-a486-1cb8617c8aca/c822f9c0-6b6f-4033-bfa3-23988470d06e.jpg" alt="iPad 繪畫跟練課－有邏輯的陰影上色（草莓女孩）">
+          <div class="c-body">
+            <span class="tag tag-free">陰影上色</span>
+            <h3>有邏輯的陰影上色（草莓女孩）</h3>
+            <p>用草莓女孩，把光影拆成看得懂、跟得上的步驟。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price free">免費</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/live4" target="_blank" rel="noopener">免費觀看</a>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/live5" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/6ad9bdd0-e2a3-40ce-b96d-066d9db28693/e61ba9dd-e97c-40c6-b96c-07fbf0d55914.jpg" alt="iPad 繪畫跟練課－繽紛的色彩速塗（飛鳥與燈塔）">
+          <div class="c-body">
+            <span class="tag tag-free">色塊速塗</span>
+            <h3>繽紛的色彩速塗（飛鳥與燈塔）</h3>
+            <p>以飛鳥與燈塔，練習輕快、不糾結細節的色塊速塗。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price free">免費</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/live5" target="_blank" rel="noopener">免費觀看</a>
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. 付費教學 ============ -->
+<section class="sec alt" id="paid-class">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-label">Online Courses</p>
+      <h2>付費教學</h2>
+      <p>想更完整、更有系統地學下去，可以從這些課程開始。</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/courses/noviceclass" target="_blank" rel="noopener">
+          <img class="c-img" src="https://s.teachifycdn.com/image/width=2048,quality=95/school/images/52de419f-3c56-4543-b688-8b641b6f33e3.jpg" alt="Procreate 新手攻略：從 0 開始繪製療癒風頭像">
+          <div class="c-body">
+            <span class="tag">新手入門</span>
+            <h3>Procreate 新手攻略：從 0 開始繪製療癒風頭像</h3>
+            <p>6 個步驟，畫出女生、男生與毛孩三張療癒風頭像。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price">NT$3,980</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/courses/noviceclass" target="_blank" rel="noopener">查看課程</a>
+            <button class="add" type="button" title="加入購物車"
+              data-type="CurriculumPlan"
+              data-id="514c2c31-cd59-4bd7-bb61-ac9f18e83356"
+              data-slug="noviceclass"
+              data-name="Procreate新手攻略：從0開始繪製療癒風頭像 - 暖心優惠價"
+              data-price="3980"
+              data-compare="5980"
+              aria-label="加入購物車：Procreate 新手攻略療癒風頭像課">
+              <svg class="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.2l2.3 11.2a1.6 1.6 0 0 0 1.6 1.3h8.7a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>
+              <svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg>
+            </button>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://sat.cool/course/83" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/course/cover_photo/e18f4dd0-6efb-43bb-b6ca-d6bc58f4d310/c970b556-ce74-4ba4-adb0-bf8e74f6ac9f.jpg" alt="知識衛星 x KIMUART：Procreate 21 天生活繪畫跟練課">
+          <div class="c-body">
+            <span class="tag">知識衛星平台</span>
+            <h3>Procreate 21 天生活繪畫跟練課</h3>
+            <p>每天三十分鐘，21 天完成約十五張圖，把畫畫變成一種生活習慣。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price">前往平台<small>知識衛星</small></span>
+          <span class="meta-actions">
+            <a class="go" href="https://sat.cool/course/83" target="_blank" rel="noopener">查看課程</a>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/courses/30dfigure" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/attachment/public_image/5f43812f-e82b-470a-8eb1-b2e55dfe22a7/caf48809-1aa7-4d0c-ab32-00156c042216.png" alt="KIMU 陪你一起畫：30 天人體速寫">
+          <div class="c-body">
+            <span class="tag">跟練課</span>
+            <h3>KIMU 陪你一起畫：30 天人體速寫</h3>
+            <p>題目都幫你準備好了，每天 30 分鐘，我陪你一起畫。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price">NT$999</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/courses/30dfigure" target="_blank" rel="noopener">查看課程</a>
+            <button class="add" type="button" title="加入購物車"
+              data-type="CurriculumPlan"
+              data-id="ff73a71a-cc97-49da-ba2d-5ea5477e62c2"
+              data-slug="30dfigure"
+              data-name="KIMU陪你一起畫：30天人體速寫 - 超值優惠價"
+              data-price="999"
+              data-compare="1200"
+              aria-label="加入購物車：KIMU 陪你一起畫 30 天人體速寫">
+              <svg class="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.2l2.3 11.2a1.6 1.6 0 0 0 1.6 1.3h8.7a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>
+              <svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg>
+            </button>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/live1" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/67475290-544c-452f-b472-8a99559aaf67/02807168-7821-447e-8170-0dbf17ae7026.jpg" alt="直播回放－iPad 繪畫跟練課．貓咪速寫">
+          <div class="c-body">
+            <span class="tag">直播回放</span>
+            <h3>iPad 繪畫跟練課－貓咪速寫</h3>
+            <p>一場完整的跟練直播，從線條到上色，畫完一隻貓。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price">NT$299</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/live1" target="_blank" rel="noopener">查看商品</a>
+            <button class="add" type="button" title="加入購物車"
+              data-type="DigitalProduct"
+              data-id="67475290-544c-452f-b472-8a99559aaf67"
+              data-slug="live1"
+              data-name="【直播回放】IPAD繪畫跟練課-貓咪速寫"
+              data-price="299"
+              aria-label="加入購物車：iPad 繪畫跟練課貓咪速寫回放">
+              <svg class="ic-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.2l2.3 11.2a1.6 1.6 0 0 0 1.6 1.3h8.7a1.6 1.6 0 0 0 1.6-1.3L21 7H6"/></svg>
+              <svg class="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg>
+            </button>
+          </span>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/courses/watercolor-trip" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/attachment/public_image/dc4ca455-d5e6-41a1-8eb2-89a239b3ab52/4319f30b-0420-4395-8990-4482b4b3f3fa.jpg" alt="輕水彩旅行速寫（即將開課）">
+          <div class="c-body">
+            <span class="tag tag-soon">即將開課</span>
+            <h3>輕水彩旅行速寫</h3>
+            <p>帶著一台 iPad mini，在咖啡店、在路上，把眼前的瞬間留一筆下來。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price soon">籌備中</span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/courses/watercolor-trip" target="_blank" rel="noopener">加入等候名單</a>
+          </span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. 一對一視覺化創作教練 ============ -->
+<section class="sec" id="coach">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-label">Visual Coaching</p>
+      <h2>一對一視覺化創作教練</h2>
+      <p>如果在創作或經營上感覺卡關，也可以來和 KIMU 聊聊。</p>
+    </div>
+
+    <div class="coach">
+      <div class="coach-media">
+        <img src="https://s.teachifycdn.com/image/width=2048,quality=95/school/images/52b677e7-1d2a-4987-9130-63760bc28882.JPG" alt="KIMU 一對一視覺化創作教練｜即時的內在速寫">
+      </div>
+      <div class="coach-txt">
+        <span class="tag">一對一．線上</span>
+        <h3>視覺化創作探索<br>用一張圖，陪你看見創作下一步</h3>
+        <p>透過深度對話與即時的「內在速寫」，把模糊的感受、卡住的地方、還沒想清楚的下一步，畫成一張看得見、可以帶走的線索。</p>
+        <p class="note">線上諮詢單次 90 分鐘，每月限量名額</p>
+        <a class="btn" href="https://course.kimu.art/visualcoach" target="_blank" rel="noopener">了解一對一教練 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 購物車浮動列 ============ -->
+<div class="bar" id="cartBar" role="region" aria-label="購物車">
+  <div class="bar-sum">
+    <div class="bar-count" id="cartCount">已選 0 項</div>
+    <div class="bar-total" id="cartTotal">NT$0</div>
+  </div>
+  <button class="bar-clear" type="button" id="cartClear">清空</button>
+  <a class="btn" id="cartGo" href="#" target="_blank" rel="noopener">前往結帳 →</a>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <img class="motto-img" src="_assets/motto_handwriting_v2.png" alt="畫溫暖的圖，給喜歡的人。">
+  <p class="links">
+    <a href="https://course.kimu.art/" target="_blank" rel="noopener">course.kimu.art</a>·
+    <a href="https://course.kimu.art/free" target="_blank" rel="noopener">免費資源</a>·
+    <a href="https://course.kimu.art/ipadguide" target="_blank" rel="noopener">設備選購指南</a>·
+    <a href="https://instagram.com/kimuart" target="_blank" rel="noopener">Instagram</a>·
+    <a href="https://www.youtube.com/@kimuart" target="_blank" rel="noopener">YouTube</a>
+  </p>
+  <p class="mail"><a href="mailto:kimu@kimu.art" style="color:inherit;text-decoration:none;">kimu@kimu.art</a>　·　KIMUART</p>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  // Teachify 結帳網址：把選到的商品打包成 base64 的 cartId 帶進 /checkout
+  var SUBDOMAIN = 'kimuart';
+  var CHECKOUT  = 'https://course.kimu.art/checkout?cartId=';
+  var STORE_KEY = 'kimuart_shop_cart_v1';
+
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.add'));
+  var bar     = document.getElementById('cartBar');
+  var elCount = document.getElementById('cartCount');
+  var elTotal = document.getElementById('cartTotal');
+  var elGo    = document.getElementById('cartGo');
+  var elClear = document.getElementById('cartClear');
+
+  var cart = load();
+
+  function load(){
+    try{
+      var raw = window.localStorage.getItem(STORE_KEY);
+      var arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr : [];
+    }catch(e){ return []; }
+  }
+  function save(){
+    try{ window.localStorage.setItem(STORE_KEY, JSON.stringify(cart)); }catch(e){}
+  }
+
+  function itemFrom(btn){
+    var it = {
+      name: btn.dataset.name,
+      price: parseInt(btn.dataset.price, 10),
+      currencySymbol: 'NT$',
+      currency: 'TWD',
+      lineitemType: btn.dataset.type,
+      lineitemId: btn.dataset.id,
+      slug: btn.dataset.slug
+    };
+    if (btn.dataset.compare) it.compareAtPrice = parseInt(btn.dataset.compare, 10);
+    return it;
+  }
+
+  function indexOf(id){
+    for (var i = 0; i < cart.length; i++) if (cart[i].lineitemId === id) return i;
+    return -1;
+  }
+
+  // base64url（先轉 UTF-8 再編碼，中文商品名才不會壞掉）
+  function encodeCart(){
+    var payload = JSON.stringify({ subdomain: SUBDOMAIN, cartDetails: cart });
+    var bytes = new TextEncoder().encode(payload);
+    var bin = '';
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
+
+  function money(n){ return 'NT$' + n.toLocaleString('en-US'); }
+
+  function render(){
+    var total = cart.reduce(function(s, i){ return s + i.price; }, 0);
+    elCount.textContent = '已選 ' + cart.length + ' 項';
+    elTotal.textContent = money(total);
+    elGo.href = cart.length ? CHECKOUT + encodeCart() : '#';
+    bar.classList.toggle('show', cart.length > 0);
+
+    buttons.forEach(function(btn){
+      var inCart = indexOf(btn.dataset.id) > -1;
+      btn.classList.toggle('in', inCart);
+      btn.title = inCart ? '已加入購物車，再點一次可移除' : '加入購物車';
+    });
+    save();
+  }
+
+  buttons.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var i = indexOf(btn.dataset.id);
+      if (i > -1) cart.splice(i, 1);
+      else cart.push(itemFrom(btn));
+      render();
+    });
+  });
+
+  elClear.addEventListener('click', function(){
+    cart = [];
+    render();
+  });
+
+  // 只保留這一頁還存在的商品，避免舊資料殘留
+  cart = cart.filter(function(i){
+    return buttons.some(function(b){ return b.dataset.id === i.lineitemId; });
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>
