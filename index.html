@@ -362,9 +362,17 @@ a{color:inherit;}
   .bar-total{font-size:17px;}
   .bar .btn{padding:11px 18px;font-size:13.5px;letter-spacing:0;}
 }
+
+/* 限時活動公告列（2026/10 懶人速繪筆刷，10/15 後整段移除） */
+.promo-bar{background:var(--glow);border-bottom:1px solid var(--sand-line);text-align:center;padding:11px 20px;font-size:14.5px;line-height:1.7;color:var(--ink);}
+.promo-bar a{color:var(--terra-deep);font-weight:500;text-decoration:none;border-bottom:1px solid var(--terra);margin-left:.5em;white-space:nowrap;}
+.promo-bar .pb-tag{display:inline-block;font-size:12px;letter-spacing:1.5px;color:#FFF8EF;background:var(--terra);border-radius:999px;padding:1px 11px;margin-right:.7em;font-weight:500;}
 </style>
 </head>
 <body>
+
+<!-- ============ 限時活動公告列（10/15 結束後移除） ============ -->
+<div class="promo-bar"><span class="pb-tag">限時活動</span>10/15 前填寫問卷，免費領取「懶人速繪筆刷」（原價 NT$299）<a href="https://course.kimu.art/digital-downloads/quicksketchbrush" target="_blank" rel="noopener">前往領取 →</a></div>
 
 <!-- ============ HERO ============ -->
 <header class="hero">
@@ -460,6 +468,24 @@ a{color:inherit;}
     </div>
 
     <div class="grid">
+
+      <!-- 限時活動（10/15 結束後：把這張卡的 tag 改回「筆刷」、價格改成 NT$299，並加回購物車鈕） -->
+      <article class="card">
+        <a class="card-link" href="https://course.kimu.art/digital-downloads/quicksketchbrush" target="_blank" rel="noopener">
+          <img class="c-img" src="https://warehouse.kaik.network/digital_product/cover_photo/3768f701-cbe6-44d3-82eb-b1aaf70134e5/53d4cb41-0f78-4ea2-9464-6607c06c09e0.png" alt="KIMU 特調懶人速繪筆刷">
+          <div class="c-body">
+            <span class="tag tag-free">限時活動</span>
+            <h3>KIMU 特調懶人速繪筆刷</h3>
+            <p>兩支速寫專用筆刷：鉛筆質感圓頭筆刷畫線稿，顆粒質感筆刷平塗上色。</p>
+          </div>
+        </a>
+        <div class="meta">
+          <span class="price free">10/15 前免費<small>原價 NT$299</small></span>
+          <span class="meta-actions">
+            <a class="go" href="https://course.kimu.art/digital-downloads/quicksketchbrush" target="_blank" rel="noopener">填問卷領取</a>
+          </span>
+        </div>
+      </article>
 
       <article class="card">
         <a class="card-link" href="https://course.kimu.art/digital-downloads/paperbrush" target="_blank" rel="noopener">
